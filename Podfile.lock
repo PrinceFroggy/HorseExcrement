@@ -1,0 +1,24 @@
+PODS:
+  - Punycode (3.0.0)
+  - SwiftSoup (2.7.0)
+  - TLDExtractSwift (3.0.0):
+    - Punycode (~> 3.0)
+
+DEPENDENCIES:
+  - SwiftSoup
+  - TLDExtractSwift (~> 3.0)
+
+SPEC REPOS:
+  trunk:
+    - Punycode
+    - SwiftSoup
+    - TLDExtractSwift
+
+SPEC CHECKSUMS:
+  Punycode: 65adf3d7c0aba6f70e82680607beafa33c639742
+  SwiftSoup: 06cbbf665257adfbfe0c927c63de246e5e844b9d
+  TLDExtractSwift: bd794ad6b5db1177fa4a0fd779be98959cfbd495
+
+PODFILE CHECKSUM: e6d23435e51eef480af8fcf3e48a5bfff60a1510
+
+COCOAPODS: 1.14.3
