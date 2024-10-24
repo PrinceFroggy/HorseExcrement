@@ -50,8 +50,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     
     struct Proxy
     {
-       let ip: String
-       let port: String
+        var ip: String
+        var port: String
     }
     
     //TEXT-DETECTION-REQUEST
@@ -540,7 +540,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             
             let session = URLSession(configuration: config)
             
-            let task = session.dataTask(with: request) 
+            let task = URLSession.shared.dataTask(with: request)
             { data, response, error in
                 
                 guard let data = data, error == nil else
@@ -680,6 +680,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 DispatchQueue.main.async
                 {
                     self!.proxy = proxies.randomElement()!
+                    
                     self!.photoLibrary.isEnabled = true
                     
                     self!.url.text = nil
@@ -716,6 +717,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             DispatchQueue.main.async
             {
                 self.proxy = proxies.randomElement()!
+                
                 self.photoLibrary.isEnabled = true
             }
         }
